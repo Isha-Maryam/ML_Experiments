@@ -73,8 +73,7 @@ model = Pipeline([
 * moderate α → best generalization
 * large α → underfitting
 
-![alt text](<Plot comparing alphas.png>)
-
+![alt text](<Ridge-Regression/Plots.pngs/Plot comparing alphas.png>)
 ---
 
 ## 🧠 𝗞𝗲𝘆 𝗟𝗲𝗮𝗿𝗻𝗶𝗻𝗴𝘀
