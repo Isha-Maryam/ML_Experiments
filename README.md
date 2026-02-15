@@ -43,10 +43,10 @@ Because real ML skill comes from experimentation, not memorization.
 
 | Algorithm                  | Status        |
 | -------------------------- | ------------- |
-| Ridge Regression           | ✅ Completed   |
-| Linear Regression          | ⏳ Coming soon |
-| Multiple Linear Regression | ⏳ Coming soon |
-| Polynomial Regression      | ⏳ Coming soon |
+| Ridge Regression           | ✅ Completed  |
+| Linear Regression          | ✅ Completed |
+| Multiple Linear Regression | ✅ Completed |
+| Polynomial Regression      | ✅ Completed |
 | Lasso Regression           | ⏳ Coming soon |
 | Elastic Net                | ⏳ Coming soon |
 
