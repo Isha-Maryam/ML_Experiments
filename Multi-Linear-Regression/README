@@ -1,0 +1,84 @@
+══════════════════════════════════════
+📖 Multiple Linear Regression (Practice)
+══════════════════════════════════════
+
+A practice exercise in Python to understand **Multiple Linear Regression** with 2 features.  
+Includes **3D visualization** of the dataset and regression predictions.
+
+────────────────────────────
+ℹ️  Overview
+────────────────────────────
+
+• Generate synthetic regression data with 2 features  
+• Visualize data in 3D (feature1, feature2, target)  
+• Train a Multiple Linear Regression model  
+• Predict target values for test data  
+• Plot regression surface in 3D  
+
+────────────────────────────
+🛠  Tools & Libraries
+────────────────────────────
+
+• Python 3.x  
+• Pandas, NumPy  
+• Plotly (express & graph_objects) for 3D visualization  
+• scikit-learn  
+
+────────────────────────────
+💡 Code Snippets
+────────────────────────────
+
+**Generate and visualize data**
+
+```python
+from sklearn.datasets import make_regression
+import pandas as pd
+import plotly.express as px
+
+x, y = make_regression(n_samples=100, n_features=2, noise=50)
+df = pd.DataFrame({'feature1': x[:,0], 'feature2': x[:,1], 'target': y})
+
+fig = px.scatter_3d(df, x='feature1', y='feature2', z='target', color='target',
+                    title='3D Visualization of Multiple Linear Regression Data')
+fig.show()
+````
+
+**Train Multiple Linear Regression**
+
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=3)
+lr = LinearRegression()
+lr.fit(x_train, y_train)
+
+y_pred = lr.predict(x_test)
+```
+
+**3D Regression Surface**
+
+```python
+import numpy as np
+import plotly.graph_objects as go
+
+x_vals = np.linspace(-5, 5, 10)
+y_vals = np.linspace(-5, 5, 10)
+xGrid, yGrid = np.meshgrid(x_vals, y_vals)
+grid_points = np.c_[xGrid.ravel(), yGrid.ravel()]
+z = lr.predict(grid_points).reshape(10, 10)
+
+fig = px.scatter_3d(df, x='feature1', y='feature2', z='target')
+fig.add_trace(go.Surface(x=x_vals, y=y_vals, z=z))
+fig.show()
+```
+
+────────────────────────────
+📊 Model Parameters
+────────────────────────────
+
+```python
+lr.coef_       # Coefficients for feature1 & feature2
+lr.intercept_  # Intercept
+```
+

@@ -1,0 +1,86 @@
+══════════════════════════════════════
+📖 Polynomial Regression (Practice)
+══════════════════════════════════════
+
+A practice exercise in Python to understand **Polynomial Regression**.  
+This demonstrates fitting a quadratic curve to noisy data and visualizing predictions.
+
+────────────────────────────
+ℹ️  Overview
+────────────────────────────
+
+• Generate synthetic quadratic data  
+• Split data into training and testing sets  
+• Transform features for polynomial regression  
+• Train a Linear Regression model on polynomial features  
+• Predict and visualize the polynomial curve  
+
+────────────────────────────
+🛠  Tools & Libraries
+────────────────────────────
+
+• Python 3.x  
+• NumPy, Pandas, Matplotlib  
+• scikit-learn (PolynomialFeatures, LinearRegression, Pipeline)  
+
+────────────────────────────
+💡 Code Snippets
+────────────────────────────
+
+**Generate quadratic data**
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+x = 6 * np.random.rand(200,1) - 3
+y = 0.8*x**2 + 0.9*x + 2 + np.random.randn(200,1)
+
+plt.plot(x, y, 'b.')
+plt.xlabel('x')
+plt.ylabel('y')
+plt.show()
+````
+
+**Polynomial transformation & training**
+
+```python
+from sklearn.preprocessing import PolynomialFeatures
+from sklearn.linear_model import LinearRegression
+
+poly = PolynomialFeatures(degree=2, include_bias=True)
+x_train_poly = poly.fit_transform(x_train)
+x_test_poly = poly.transform(x_test)
+
+lr = LinearRegression()
+lr.fit(x_train_poly, y_train)
+y_pred = lr.predict(x_test_poly)
+```
+
+**Visualize predictions**
+
+```python
+x_new = np.linspace(-3, 3, 200).reshape(200,1)
+x_new_poly = poly.transform(x_new)
+y_new = lr.predict(x_new_poly)
+
+plt.plot(x_new, y_new, "r.", label="Predictions")
+plt.plot(x_train, y_train, "b.", label="Training points")
+plt.plot(x_test, y_test, "g.", label="Testing points")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.legend()
+plt.show()
+```
+
+────────────────────────────
+📊 Model Parameters
+────────────────────────────
+
+```python
+lr.coef_       # Coefficients for polynomial features
+lr.intercept_  # Intercept
+```
+
+────────────────────────────
+```

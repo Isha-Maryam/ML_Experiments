@@ -1,0 +1,71 @@
+══════════════════════════════════════
+📖 Simple Linear Regression
+══════════════════════════════════════
+
+A simple Linear Regression practice in Python to predict student marks based on hours studied.  
+This is purely a **practice exercise** to understand basic machine learning concepts.
+
+────────────────────────────
+ℹ️  Overview
+────────────────────────────
+
+• Load and explore the dataset (`hrs_marks.csv`)  
+• Visualize Hours Studied vs Marks  
+• Train a Linear Regression model  
+• Predict marks for new study hours  
+• Plot the regression line for interpretation  
+
+────────────────────────────
+🛠  Tools & Libraries
+────────────────────────────
+
+• Python 3.x  
+• Pandas, NumPy, Matplotlib  
+• scikit-learn  
+
+────────────────────────────
+💡 Code Snippets
+────────────────────────────
+
+**Load and visualize data**
+
+```python
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.read_csv('hrs_marks.csv')
+plt.scatter(df['Hours_Studied'], df['Marks'])
+plt.xlabel('Hours Studied')
+plt.ylabel('Marks')
+````
+
+**Train Linear Regression**
+
+```python
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LinearRegression
+
+x = df[['Hours_Studied']]
+y = df['Marks']
+
+x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_state=2)
+lr = LinearRegression()
+lr.fit(x_train, y_train)
+```
+
+**Predict example**
+
+```python
+predicted_marks = lr.predict([[8.58]])
+print(predicted_marks)
+```
+
+────────────────────────────
+📊 Visualization
+────────────────────────────
+
+• Blue dots → Original data points
+• Red line → Regression prediction
+
+────────────────────────────
+
