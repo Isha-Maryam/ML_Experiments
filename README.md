@@ -48,7 +48,7 @@ Because real ML skill comes from experimentation, not memorization.
 | Multiple Linear Regression | ✅ Completed |
 | Polynomial Regression      | ✅ Completed |
 | Lasso Regression           | ✅ Coming soon |
-| Elastic Net                | ⏳ Coming soon |
+| Elastic Net                | ✅  Coming soon |
 
 ---
 
@@ -56,8 +56,8 @@ Because real ML skill comes from experimentation, not memorization.
 
 | Algorithm           | Status        |
 | ------------------- | ------------- |
-| Logistic Regression | ⏳ Coming soon |
-| KNN                 | ⏳ Coming soon |
+| Logistic Regression | ✅ Coming soon |
+| KNN                 | ✅ Coming soon |
 | Naive Bayes         | ⏳ Coming soon |
 | SVM                 | ⏳ Coming soon |
 | Decision Tree       | ⏳ Coming soon |
