@@ -58,13 +58,12 @@ Because real ML skill comes from experimentation, not memorization.
 | ------------------- | ------------- |
 | Logistic Regression | ✅ Coming soon |
 | KNN                 | ✅ Coming soon |
-| Naive Bayes         | ⏳ Coming soon |
-| SVM                 | ⏳ Coming soon |
-| Decision Tree       | ⏳ Coming soon |
-| Random Forest       | ⏳ Coming soon |
-| Gradient Boosting   | ⏳ Coming soon |
+| Naive Bayes         | ✅ Coming soon |
+| SVM                 | ✅ Coming soon |
+| Decision Tree       | ✅ Coming soon |
+| Random Forest       | ✅ Coming soon |
+| Gradient Boosting   | ✅ Coming soon |
 | XGBoost             | ⏳ Coming soon |
-| LightGBM            | ⏳ Coming soon |
 | CatBoost            | ⏳ Coming soon |
 
 ---
@@ -76,13 +75,12 @@ Because real ML skill comes from experimentation, not memorization.
 | K-Means Clustering      | ⏳ Coming soon |
 | Hierarchical Clustering | ⏳ Coming soon |
 | DBSCAN                  | ⏳ Coming soon |
-| PCA                     | ⏳ Coming soon |
-| t-SNE                   | ⏳ Coming soon |
-| Association Rules       | ⏳ Coming soon |
+| PCA                     | ✅ Coming soon |
+
 
 ---
 
-## 🔁 𝗦𝗲𝗺𝗶-𝗦𝘂𝗽𝗲𝗿𝘃𝗶𝘀𝗲𝗱
+<!-- ## 🔁 𝗦𝗲𝗺𝗶-𝗦𝘂𝗽𝗲𝗿𝘃𝗶𝘀𝗲𝗱
 
 | Algorithm         | Status        |
 | ----------------- | ------------- |
@@ -97,7 +95,7 @@ Because real ML skill comes from experimentation, not memorization.
 | --------------- | ------------- |
 | Q-Learning      | ⏳ Coming soon |
 | Deep Q Network  | ⏳ Coming soon |
-| Policy Gradient | ⏳ Coming soon |
+| Policy Gradient | ⏳ Coming soon | -->
 
 ---
 
@@ -106,6 +104,7 @@ Because real ML skill comes from experimentation, not memorization.
 * Python
 * NumPy
 * Matplotlib
+* Seaborn
 * scikit-learn
 * Jupyter Notebook
 
