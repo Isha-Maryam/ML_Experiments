@@ -63,8 +63,8 @@ Because real ML skill comes from experimentation, not memorization.
 | Decision Tree       | ✅ Coming soon |
 | Random Forest       | ✅ Coming soon |
 | Gradient Boosting   | ✅ Coming soon |
-| XGBoost             | ⏳ Coming soon |
-| CatBoost            | ⏳ Coming soon |
+| XGBoost             | ✅ Coming soon |
+| CatBoost            | ✅ Coming soon |
 
 ---
 
@@ -72,9 +72,9 @@ Because real ML skill comes from experimentation, not memorization.
 
 | Algorithm               | Status        |
 | ----------------------- | ------------- |
-| K-Means Clustering      | ⏳ Coming soon |
-| Hierarchical Clustering | ⏳ Coming soon |
-| DBSCAN                  | ⏳ Coming soon |
+| K-Means Clustering      | ✅ Coming soon |
+<!-- | Hierarchical Clustering | ⏳ Coming soon |
+| DBSCAN                  | ⏳ Coming soon | -->
 | PCA                     | ✅ Coming soon |
 
 
